@@ -12,7 +12,7 @@ class _BaseView {
       body: Consumer(builder: (context, ref, _) {
         return ref.watch(networkStatusProvider).when(
             data: (network) {
-              return network == NetworkStatus.ONLINE
+              return network != NetworkStatus.ONLINE
                   // TODO:May Be Error reverse Logic
                   ? KErrorWidget()
                   : scrollable()

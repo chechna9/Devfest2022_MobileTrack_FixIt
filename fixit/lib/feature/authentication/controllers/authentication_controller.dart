@@ -37,7 +37,7 @@ class AuthenticationController extends StateNotifier<BaseState> {
   Future<void> signUp({String email, password}) async {
     try {
       state = LoadingState();
-      // await _repository.signUp(email: email, password: password);
+      await _repository.signUp(email: email, password: password);
       authStateChangeStatus();
     } on FirebaseAuthException catch (e) {
       Log.error(e.code);

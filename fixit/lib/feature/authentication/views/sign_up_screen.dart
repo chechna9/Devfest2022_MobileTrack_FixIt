@@ -2,7 +2,6 @@ import 'package:fixit/utils/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-
 import '../../../core/base/base_state.dart';
 import '../../../core/base/base_view.dart';
 import '../../../utils/colors.dart';
@@ -89,7 +88,8 @@ class _SignupScreenState extends BaseViewState<SignupScreen> {
                 if (!(authState is LoadingState)) {
                   hideKeyboard(context);
                   if (emailController.text.trim().isNotEmpty) {
-                    if (passwordController.text == confirmPasswordController.text) {
+                    if (passwordController.text ==
+                        confirmPasswordController.text) {
                       ref.read(authenticationProvider.notifier).signUp(
                             email: emailController.text,
                             password: passwordController.text,
@@ -117,7 +117,10 @@ class _SignupScreenState extends BaseViewState<SignupScreen> {
                 })
           ],
         ),
-        Positioned(child: Image.asset("assets/elements/Asset 2.png") , top: 0,),
+        Positioned(
+          child: Image.asset("assets/elements/Asset 2.png"),
+          top: 0,
+        ),
       ],
     );
   }

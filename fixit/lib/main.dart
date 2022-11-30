@@ -23,7 +23,7 @@ Future<void> main() async {
   /// A widget that stores the state of providers.
   /// All Flutter applications using Riverpod must contain a [ProviderScope] at
   /// the root of their widget tree
-  runApp(ProviderScope(child: MyApp()));
+  m.runApp(ProviderScope(child: MyApp()));
 }
 
 class MyApp extends m.StatelessWidget {

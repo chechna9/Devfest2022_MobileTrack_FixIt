@@ -68,7 +68,7 @@ class AuthenticationController extends StateNotifier<BaseState> {
         if (user != null) {
           this.user = user;
           try {
-            setValue(NEW_INSTALL, this.user.uid);
+            setValue(USER_UID, this.user.uid);
             print(this.user.uid);
           } catch (e, stackTrace) {
             Log.error(e);

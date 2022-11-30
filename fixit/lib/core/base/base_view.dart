@@ -13,6 +13,7 @@ class _BaseView {
         return ref.watch(networkStatusProvider).when(
             data: (network) {
               return network == NetworkStatus.ONLINE
+                  // TODO:May Be Error reverse Logic
                   ? KErrorWidget()
                   : scrollable()
                       ? SingleChildScrollView(
